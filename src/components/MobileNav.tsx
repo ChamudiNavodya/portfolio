@@ -47,7 +47,20 @@ const MobileNav = () => {
                 </div>
 
                 {/* nav */}
-                <nav>nav</nav>
+                <nav className="flex flex-col justify-center items-center gap-8">
+                    {link.map((link,index)=>{
+                        return (
+                            <Link 
+                                href={link.path} 
+                                key={index} 
+                                className={`text-xl capitalize hover:text-accent transition-all`}
+                            >
+                                {link.name}
+                            </Link>
+                        );
+
+                    })}
+                </nav>
             </SheetContent>
         </Sheet>
     );
