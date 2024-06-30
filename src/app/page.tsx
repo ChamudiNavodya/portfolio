@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
+//components
+import Social from "@/components/Social";
 const Home = () => {
   return (
     <section className="h-full">
@@ -35,7 +37,9 @@ const Home = () => {
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
-              <div>socials</div>
+              <div className="text-xl">
+                <Social/>
+              </div>
             </div>
 
 
