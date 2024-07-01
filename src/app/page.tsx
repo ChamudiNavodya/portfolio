@@ -3,6 +3,7 @@ import { FiDownload } from "react-icons/fi";
 
 //components
 import Social from "@/components/Social";
+
 const Home = () => {
   return (
     <section className="h-full">
