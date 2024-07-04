@@ -49,10 +49,10 @@ const Photo = () => {
                         initial={{ strokeDasharray: "24 10 0 0" }}
                         animate={{
                             strokeDasharray: ["15 12 25 25", "16 25 92 72", "4 250 22 22"],
-                            rotate: [12, 36],
+                            rotate: [120, 360],
                         }}
                         transition={{
-                            duration: 40,
+                            duration: 20,
                             repeat: Infinity,
                             repeatType: "reverse",
                         }}
