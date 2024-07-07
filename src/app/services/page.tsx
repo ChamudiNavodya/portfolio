@@ -19,7 +19,7 @@ const services = [
           "Elevate your digital presence with intuitive and visually stunning UI/UX design. Let's craft exceptional user experiences together!",
         href: "",
       },
-      
+
     {
       num: "03",
       title: "Mobile development",
@@ -37,12 +37,44 @@ const services = [
     },
   ];
 
+import { motion } from "framer-motion";
 
 
 
 const Services = () => {
     return (
-        <div>services page</div>
+        <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+            <div className="container mx-auto">
+                <motion.div
+                    initial={{opacity: 0}}
+                    animate={{
+                        opacity: 1,
+                        transition: {delay:2.4, duration:0.4, ease: "easeIn"},
+                    }}
+            >
+               {services.map((service, index)=>{
+                return (
+                <div key={index}>
+                    {/* top */}
+                    <div>
+                        <div>{service.num}</div>
+                        <Link href={service.href}>
+                            <BsArrowDownRight/>
+                        </Link>
+                    </div>
+                    {/* title */}
+                    <h2>{service.title}</h2>
+                    {/* description */}
+                    <p>{service.description}</p>
+                    {/* border */}
+                    <div className="border-b border-white/20 w-full"></div>
+                </div>
+                );
+               })} 
+            </motion.div>
+            </div>
+        </section>
+        
     )
 };
 
